@@ -1,0 +1,8 @@
+settings.json
+EditDistance
+LCS
+kmp.o
+naive_implementation.o
+rabin_karp.o
+test.o
+test

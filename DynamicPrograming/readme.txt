@@ -1,0 +1,4 @@
+COMPILAR CADA ARQUIVO NO TERMINAL:
+c++ code.cpp -o code
+EXECUTAR:
+./code

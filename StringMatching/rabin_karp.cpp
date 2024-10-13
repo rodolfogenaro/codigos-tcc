@@ -28,10 +28,12 @@ void rabinKarp(std::string texto, std::string padrao)
 
     int i, j;
 
-	// ... pow(alphabetCharCount, tamanhoPadrao-1)%numeroPrimoAlto 
-    int h = 1;
+	// constante que auxilia quando e necessario desconsiderar
+	// primeiro caractere da janela
+	// == pow(alphabetCharCount, tamanhoPadrao-1)%numeroPrimoAlto 
+    int constanteHash = 1;
 	for (i = 0; i < tamanhoPadrao - 1; i++)
-		h = calculaHashValue(h, 0);
+		constanteHash = calculaHashValue(constanteHash, 0);
 
 	for (i = 0; i < tamanhoPadrao; i++) {
         // calcula valor hash de todos os caracteres de padrao
@@ -63,7 +65,7 @@ void rabinKarp(std::string texto, std::string padrao)
         // valor do caractere sucessor ao ultimo de janela atual
 		if (i < tamanhoTexto - tamanhoPadrao) { 
 			valorHashTexto = calculaHashValue(
-                valorHashTexto - texto[i] * h,
+                valorHashTexto - texto[i] * constanteHash,
                 texto[i + tamanhoPadrao]
             );
 

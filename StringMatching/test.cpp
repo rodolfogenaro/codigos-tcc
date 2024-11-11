@@ -19,28 +19,28 @@ int main()
 
 
     // Naive Implementation
-    auto start = high_resolution_clock::now();
+    auto incioTempo = high_resolution_clock::now();
     naiveImplementation(textoGrande, padraoGrande);
-    auto stop = high_resolution_clock::now();
+    auto fimTempo = high_resolution_clock::now();
 
-    auto duration = duration_cast<microseconds>(stop - start);
-    cout << "Duração de Naive Implementation: " << duration.count() << " microsegundos\n" << endl;
+    auto duracao = duration_cast<microseconds>(fimTempo - incioTempo);
+    cout << "Duração de Naive Implementation: " << duracao.count() << " microsegundos\n" << endl;
 
     // KMP
-    start = high_resolution_clock::now();
+    incioTempo = high_resolution_clock::now();
     kmp(textoGrande, padraoGrande);
-    stop = high_resolution_clock::now();
+    fimTempo = high_resolution_clock::now();
 
-    duration = duration_cast<microseconds>(stop - start);
-    cout << "Duração de KMP: " << duration.count() << " microsegundos\n" << endl;
+    duracao = duration_cast<microseconds>(fimTempo - incioTempo);
+    cout << "Duração de KMP: " << duracao.count() << " microsegundos\n" << endl;
 
     // Rabin-Karp
-    start = high_resolution_clock::now();
+    incioTempo = high_resolution_clock::now();
     rabinKarp(textoGrande, padraoGrande);
-    stop = high_resolution_clock::now();
+    fimTempo = high_resolution_clock::now();
 
-    duration = duration_cast<microseconds>(stop - start);
-    cout << "Duração de Rabin-Karp: " << duration.count() << " microsegundos\n" << endl;
+    duracao = duration_cast<microseconds>(fimTempo - incioTempo);
+    cout << "Duração de Rabin-Karp: " << duracao.count() << " microsegundos\n" << endl;
 
     return 0; 
 }

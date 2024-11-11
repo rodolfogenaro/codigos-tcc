@@ -1,7 +1,11 @@
-COMPILE EVERY FILE LIKE SO:
-g++ -c file1.cpp
-g++ -c file2.cpp
-...
+COMPILE EVERY FILE LIKE SO, AND THEN CREATE THE EXECUTABLE:
 
-THEN CREATE THE EXECUTABLE:
-$ g++ file1.o file2.o -o my_program
+g++ -c naive_implementation.cpp && \
+g++ -c kmp.cpp && \
+g++ -c rabin_karp.cpp && \
+g++ -c test.cpp && \
+g++ naive_implementation.o kmp.o rabin_karp.o test.o -o test
+
+EXECUTE:
+
+./test

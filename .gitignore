@@ -4,5 +4,17 @@ LCS
 kmp.o
 naive_implementation.o
 rabin_karp.o
+suffix_tree.o
+suffix_array.o
+string_matching.o
+lcs.o
 test.o
 test
+original_sf.cpp
+original_sf
+modified_sf.cpp
+modified_sf
+original_sa.cpp
+original_sa
+modified_sa.cpp
+modified_sa

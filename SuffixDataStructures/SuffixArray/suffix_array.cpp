@@ -59,7 +59,6 @@ int* construirSuffixArray(std::string texto) {
     texto.append("$");
     tamanhoTexto++;
 
-    // essa versão pode processar até 100000 caracteres
     int i, k, r;
     for (i = 0; i < tamanhoTexto; i++)
         RA[i] = texto[i];
